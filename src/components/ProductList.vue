@@ -12,6 +12,7 @@
       <div
         v-for="product in products"
         :key="product.id"
+        :data-testid="`product-card-${product.id}`"
         class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
       >
         <img :src="product.imageUrl" :alt="product.name" class="w-full h-48 object-cover" />
