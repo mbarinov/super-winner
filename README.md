@@ -30,6 +30,17 @@ src/
 └── views/       # The main page components
 ```
 
+## 🚀 GitHub Codespaces
+
+This project is ready for GitHub Codespaces! You can start coding immediately with:
+
+1. Go to your GitHub repository
+2. Click the "Code" button
+3. Select the "Codespaces" tab
+4. Click "Create codespace on main"
+
+The environment will set up automatically with all necessary dependencies and extensions.
+
 ## 🧪 Testing Stuff
 
 ### Quick Unit Tests
