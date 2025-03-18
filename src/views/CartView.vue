@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto px-4 py-8">
-    <h1 class="mb-8 text-3xl font-bold">Shopping Cart</h1>
+    <h1 class="mb-8 text-3xl font-bold" data-testid="cart-title">Shopping Cart</h1>
 
     <div v-if="cartStore.items.length > 0">
       <TransitionGroup name="list" tag="div" class="mb-8 space-y-4" appear>
@@ -8,6 +8,7 @@
           v-for="item in cartStore.items"
           :key="item.id"
           class="flex items-center gap-4 rounded-lg border border-gray-200 bg-white p-4 shadow-sm"
+          data-testid="cart-items"
         >
           <img :src="item.imageUrl" :alt="item.name" class="h-24 w-24 rounded-lg object-cover" />
           <div class="flex-1">
@@ -23,12 +24,15 @@
       <div class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
         <div class="mb-4 flex justify-between text-lg">
           <span>Total:</span>
-          <span class="font-bold">${{ cartStore.totalPrice.toFixed(2) }}</span>
+          <span class="font-bold" data-testid="total-price"
+            >${{ cartStore.totalPrice.toFixed(2) }}</span
+          >
         </div>
         <button
           @click="placeOrder"
           class="w-full rounded-lg bg-blue-600 py-3 text-lg font-semibold text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           :disabled="isPlacingOrder"
+          data-testid="place-order"
         >
           <span v-if="!isPlacingOrder">Place Order</span>
           <span v-else class="flex items-center justify-center gap-2">
@@ -42,10 +46,11 @@
     </div>
 
     <div v-else class="text-center">
-      <p class="mb-4 text-gray-500">Your cart is empty</p>
+      <p class="mb-4 text-gray-500" data-testid="empty-cart-message">Your cart is empty</p>
       <router-link
         to="/"
         class="inline-block rounded-lg bg-blue-600 px-6 py-3 text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        data-testid="continue-shopping"
       >
         Continue Shopping
       </router-link>
@@ -57,11 +62,14 @@
         class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
       >
         <div class="rounded-lg bg-white p-8 text-center shadow-xl">
-          <h2 class="mb-4 text-2xl font-bold text-green-600">Order Placed!</h2>
+          <h2 class="mb-4 text-2xl font-bold text-green-600" data-testid="order-confirmation">
+            Order Placed!
+          </h2>
           <p class="mb-4">Thank you for your purchase.</p>
           <button
             @click="closeOrderConfirmation"
             class="rounded-lg bg-blue-600 px-6 py-2 text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            data-testid="close-dialog"
           >
             Close
           </button>

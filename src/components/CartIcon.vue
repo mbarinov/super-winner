@@ -3,6 +3,7 @@
     to="/cart"
     class="relative inline-flex items-center p-2 text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
     aria-label="Shopping cart"
+    data-testid="cart-icon"
   >
     <ShoppingCart class="h-6 w-6" aria-hidden="true" />
     <span
