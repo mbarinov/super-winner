@@ -39,7 +39,13 @@ This project is ready for GitHub Codespaces! You can start coding immediately wi
 3. Select the "Codespaces" tab
 4. Click "Create codespace on main"
 
-The environment will set up automatically with all necessary dependencies and extensions.
+The environment will set up automatically with all necessary dependencies and extensions. The development server will automatically start when your Codespace launches.
+
+To manually run the dev server:
+
+```bash
+npm run dev
+```
 
 ## 🧪 Testing Stuff
 

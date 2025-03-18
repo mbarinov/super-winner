@@ -15,10 +15,14 @@
         "dbaeumer.vscode-eslint",
         "EditorConfig.EditorConfig",
         "esbenp.prettier-vscode"
-      ]
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh"
+      }
     }
   },
   "forwardPorts": [5173],
   "postCreateCommand": "npm install && npx playwright install --with-deps",
+  "postStartCommand": "npm run dev",
   "waitFor": "postCreateCommand"
 }
