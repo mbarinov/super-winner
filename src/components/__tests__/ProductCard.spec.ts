@@ -29,7 +29,7 @@ const router = createRouter({
   ],
 })
 
-vi.mock('../Cart.vue', () => ({
+vi.mock('../ProductCart.vue', () => ({
   default: {
     name: 'Cart',
     props: ['productId'],
