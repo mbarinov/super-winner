@@ -1,64 +1,51 @@
-# ecwid
+# Hey, Welcome to Ecwid! 👋
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a Vue 3 project I built with TypeScript and Vite. Hope you like it!
 
-## Recommended IDE Setup
+## ✨ What's Inside
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+I've put together a modern stack that makes development fun:
 
-## Type Support for `.vue` Imports in TS
+- **Vue 3** with the awesome Composition API
+- **TypeScript** for those sweet type hints
+- **Vite** because nobody likes waiting for builds
+- **Pinia** for easy state management
+- **Vue Router** for seamless navigation
+- **TailwindCSS** for quick styling without the hassle
+- **TanStack Vue Query** to handle all that data-fetching magic
+- **Vitest & Playwright** so we can sleep well knowing everything works
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## 📁 How It's Organized
 
-## Customize configuration
+I've tried to keep things logical and easy to find:
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+```
+src/
+├── assets/      # Images, fonts, and global styles
+├── components/  # All the reusable UI pieces
+├── composables/ # Shared Vue logic hooks
+├── router/      # Navigation setup
+├── services/    # API calls and external integrations
+├── stores/      # State management with Pinia
+└── views/       # The main page components
 ```
 
-### Compile and Hot-Reload for Development
+## 🧪 Testing Stuff
 
-```sh
-npm run dev
-```
+### Quick Unit Tests
 
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
+```bash
 npm run test:unit
 ```
 
-### Run End-to-End Tests with [Playwright](https://playwright.dev)
+### Full E2E Tests
 
-```sh
-# Install browsers for the first run
+```bash
+# First time? Install the browser engines:
 npx playwright install
 
-# When testing on CI, must build the project first
-npm run build
-
-# Runs the end-to-end tests
+# Run the tests:
 npm run test:e2e
-# Runs the tests only on Chromium
-npm run test:e2e -- --project=chromium
-# Runs the tests of a specific file
-npm run test:e2e -- tests/example.spec.ts
-# Runs the tests in debug mode
-npm run test:e2e -- --debug
 ```
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Feel free to explore and modify anything. Have fun with it!
