@@ -4,7 +4,7 @@
       <button
         @click="handleAddToCart"
         :disabled="isAdding"
-        class="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white font-medium rounded hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+        class="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white font-medium rounded hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
       >
         <template v-if="!isAdding"> <Plus class="h-5 w-5 mr-2" /> Add to Cart </template>
         <template v-else> <Loader2 class="h-5 w-5 animate-spin mr-2" /> Adding... </template>
