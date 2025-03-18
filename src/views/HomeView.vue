@@ -14,12 +14,13 @@
         v-for="category in categories"
         :key="category.id"
         :to="`/category/${category.id}`"
+        data-testid="category-link"
       >
         {{ category.name }}
       </router-link>
     </div>
 
-    <h2 class="mb-8 text-3xl font-bold">All Products</h2>
+    <h2 class="mb-8 text-3xl font-bold" data-testid="products-heading">All Products</h2>
     <div v-if="isLoading">
       <div class="flex items-center justify-center space-x-2">
         <div
@@ -32,7 +33,11 @@
       {{ productsQuery.error instanceof Error ? productsQuery.error.message : 'An error occurred' }}
     </div>
     <div v-else-if="!products.length" class="text-center text-gray-500">No products found</div>
-    <div v-else class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+    <div
+      v-else
+      class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3"
+      data-testid="product-list"
+    >
       <ProductCard v-for="product in products" :key="product.id" :product="product" />
     </div>
   </div>
@@ -40,7 +45,6 @@
 
 <script setup lang="ts">
 import { computed, unref } from 'vue'
-import CategoryCard from '../components/CategoryCard.vue'
 import ProductCard from '../components/ProductCard.vue'
 import { useCategories, useProducts } from '../composables/useQueries'
 import type { Category, Product } from '../services/ecwidApi'
