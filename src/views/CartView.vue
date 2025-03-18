@@ -82,7 +82,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Loader2 } from 'lucide-vue-next'
-import Cart from '@/components/Cart.vue'
+import Cart from '@/components/ProductCart.vue'
 import { useCartStore } from '@/stores/cart'
 
 const cartStore = useCartStore()

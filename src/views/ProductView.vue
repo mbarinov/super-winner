@@ -32,7 +32,7 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import DOMPurify from 'dompurify'
 
-import Cart from '@/components/Cart.vue'
+import Cart from '@/components/ProductCart.vue'
 import { useProduct } from '../composables/useQueries'
 
 const route = useRoute()

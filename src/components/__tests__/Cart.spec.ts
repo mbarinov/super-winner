@@ -1,7 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { createTestingPinia } from '@pinia/testing'
-import Cart from '../Cart.vue'
+import Cart from '../ProductCart.vue'
 import { Plus, Minus, Loader2, Trash } from 'lucide-vue-next'
 import type { ComponentPublicInstance } from 'vue'
 import type { CartItem } from '@/services/ecwidApi'

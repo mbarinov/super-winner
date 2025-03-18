@@ -23,7 +23,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import Cart from './Cart.vue'
+import Cart from './ProductCart.vue'
 import type { Product } from '../services/ecwidApi'
 
 const props = defineProps<{
